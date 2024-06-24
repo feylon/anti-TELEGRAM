@@ -53,7 +53,7 @@ app.post('/', (req, res) => {
     
     fs.writeFile(process.cwd() + "/filePath", dataString, (err) => {
       if (err) {
-        console.error('Error writing to file', err);
+        console.error('Fayl saqlashda xatolik', err);
         res.status(500).send('Server Error');
         return;
       }
@@ -65,7 +65,7 @@ app.post('/', (req, res) => {
 app.get("/api",(req,res)=>{
     fs.readFile(process.cwd() + "/filePath", 'utf8', (err, data) => {
         if (err) {
-          console.error('Error reading file', err);
+          console.error('Faylni saqlashda xatolik', err);
           return;
         }
         
